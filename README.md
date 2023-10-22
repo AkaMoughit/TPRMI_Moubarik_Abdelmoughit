@@ -16,6 +16,7 @@ Ce projet est un système de gestion des machines et des salles basé sur Java, 
 
 ## video
 
+https://github.com/AkaMoughit/TPRMI_Moubarik_Abdelmoughit/assets/73391568/c1689299-c6cc-4510-8f36-5f0c1b8700f1
 
 
 
