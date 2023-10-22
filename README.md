@@ -8,9 +8,9 @@ Ce programme représente un système sophistiqué de gestion des machines et des
 
 . Architecture Client-Serveur: Ce projet adopte un modèle client-serveur où le serveur assume la responsabilité de la gestion des données ainsi que du traitement des requêtes émanant des clients.
 
-. Gestion des Salles: Les utilisateurs ont la capacité de créer, modifier et supprimer des salles. Chacune de ces salles est caractérisée par diverses propriétés, dont son nom et d'autres détails pertinents...
+. Gestion des Salles: Les utilisateurs ont la capacité de créer, modifier et supprimer des salles.
 
-. Gestion des Machines: Le système permet l'ajout et la suppression de machines au sein des salles. Ces machines peuvent être configurées avec des attributs spécifiques, notamment leur nom et d'autres informations détaillées...
+. Gestion des Machines: Le système permet l'ajout et la suppression de machines au sein des salles. Ces machines peuvent être configurées avec des attributs spécifiques, notamment leur nom et d'autres informations détaillées
 
 . Communication RMI: Dans ce projet, RMI est employé pour simplifier les échanges entre le client et le serveur. Cela garantit la cohérence des données ainsi que la sécurité des transactions effectuées.
 
