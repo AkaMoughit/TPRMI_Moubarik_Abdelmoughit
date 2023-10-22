@@ -15,14 +15,4 @@ Ce projet est un système de gestion des machines et des salles basé sur Java, 
 . Communication RMI: Le projet exploite RMI pour faciliter la communication entre le client et le serveur, assurant la cohérence des données et des transactions sécurisées.
 
 ## video
-
-
 https://github.com/AkaMoughit/TPRMI_Moubarik_Abdelmoughit/assets/73391568/4f21a4bb-ac35-440b-ba09-89265075f068
-
-
-
-
-
-
-
-
