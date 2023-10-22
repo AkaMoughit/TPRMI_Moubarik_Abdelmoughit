@@ -32,17 +32,12 @@ public class ServerMachine {
      */
     public static void main(String[] args) throws RemoteException {
         try {
-            IDao<Machine> dao = new  MachineService();
-            IDao<Salle> salle = new SalleService();
-            
+            IDao<Machine> dao = new MachineService();
+            IDao<Salle> dao2 = new SalleService();
             LocateRegistry.createRegistry(1099);
-            
-            Naming.bind("rmi://localhost:1099/machine", dao);
-            Naming.bind("rmi://localhost:1099/salle", salle);
-            
-             for (Salle s:salle.findAll()){
-                 System.out.println(s);
-             }
+            Naming.bind("rmi://localhost:1099/dao", dao);
+            Naming.bind("rmi://localhost:1099/dao2", dao2);
+
             System.out.println("En attente d'un client ");
             
         } catch (AlreadyBoundException ex) {

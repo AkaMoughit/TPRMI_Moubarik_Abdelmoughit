@@ -8,7 +8,6 @@ package clientmachine;
 import dao.IDao;
 import entities.Machine;
 import entities.Salle;
-//import entities.Salle;
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
@@ -27,12 +26,12 @@ public class ClientMachine {
      */
     public static void main(String[] args) {
         try {
-            IDao<Machine> machine = (IDao<Machine>) Naming.lookup("rmi://localhost:1099/machine");
-            IDao<Salle> salles = (IDao<Salle>) Naming.lookup("rmi://localhost:1099/salle");
-       
-            for (Salle s: salles.findAll()){
-                 System.out.println(s);
-             }
+            IDao<Machine> machine = (IDao<Machine>) Naming.lookup("rmi://localhost:1099/dao");
+            IDao<Salle> salles = (IDao<Salle>) Naming.lookup("rmi://localhost:1099/dao2");
+
+            for (Salle s : salles.findAll()) {
+                System.out.println(s);
+            }
 
         } catch (NotBoundException ex) {
             Logger.getLogger(ClientMachine.class.getName()).log(Level.SEVERE, null, ex);

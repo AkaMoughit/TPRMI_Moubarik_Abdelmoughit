@@ -32,14 +32,19 @@ public class Main extends javax.swing.JFrame {
         desktopPane = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
         editMenu = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
         machineMenuItem = new javax.swing.JMenuItem();
-        deleteMenuItem = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        deleteMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         editMenu.setMnemonic('e');
         editMenu.setText("Gestion");
+        menuBar.add(editMenu);
+
+        jMenu1.setText("machine");
 
         machineMenuItem.setMnemonic('t');
         machineMenuItem.setText("Machines");
@@ -48,7 +53,19 @@ public class Main extends javax.swing.JFrame {
                 machineMenuItemActionPerformed(evt);
             }
         });
-        editMenu.add(machineMenuItem);
+        jMenu1.add(machineMenuItem);
+
+        jMenuItem1.setText("Machines par Salle");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        menuBar.add(jMenu1);
+
+        jMenu2.setText("salle");
 
         deleteMenuItem.setMnemonic('d');
         deleteMenuItem.setText("Salles");
@@ -57,17 +74,9 @@ public class Main extends javax.swing.JFrame {
                 deleteMenuItemActionPerformed(evt);
             }
         });
-        editMenu.add(deleteMenuItem);
+        jMenu2.add(deleteMenuItem);
 
-        jMenuItem1.setText("Machines par Salle");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        editMenu.add(jMenuItem1);
-
-        menuBar.add(editMenu);
+        menuBar.add(jMenu2);
 
         setJMenuBar(menuBar);
 
@@ -144,6 +153,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem deleteMenuItem;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem machineMenuItem;
     private javax.swing.JMenuBar menuBar;
