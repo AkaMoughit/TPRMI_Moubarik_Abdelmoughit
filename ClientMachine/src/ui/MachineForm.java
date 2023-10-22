@@ -110,10 +110,7 @@ public class MachineForm extends javax.swing.JInternalFrame {
         listMachines = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setClosable(true);
-        setIconifiable(true);
-        setMaximizable(true);
-        setResizable(true);
+        setForeground(java.awt.Color.white);
         setTitle("moubarik test");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));

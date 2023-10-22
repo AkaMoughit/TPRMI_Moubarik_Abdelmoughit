@@ -31,18 +31,12 @@ public class Main extends javax.swing.JFrame {
 
         desktopPane = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
-        editMenu = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
         machineMenuItem = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         deleteMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        editMenu.setMnemonic('e');
-        editMenu.setText("Gestion");
-        menuBar.add(editMenu);
 
         jMenu1.setText("machine");
 
@@ -54,14 +48,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
         jMenu1.add(machineMenuItem);
-
-        jMenuItem1.setText("Machines par Salle");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem1);
 
         menuBar.add(jMenu1);
 
@@ -99,6 +85,7 @@ public class Main extends javax.swing.JFrame {
 
         MachineForm mf = new MachineForm();
         desktopPane.add(mf);
+        mf.setSize(1600, 1000);
         mf.setVisible(true);
     }//GEN-LAST:event_machineMenuItemActionPerformed
 
@@ -106,13 +93,9 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
          SalleForm sf = new SalleForm();
         desktopPane.add(sf);
+        sf.setSize(1600, 1000);
         sf.setVisible(true);
     }//GEN-LAST:event_deleteMenuItemActionPerformed
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,10 +135,8 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem deleteMenuItem;
     private javax.swing.JDesktopPane desktopPane;
-    private javax.swing.JMenu editMenu;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem machineMenuItem;
     private javax.swing.JMenuBar menuBar;
     // End of variables declaration//GEN-END:variables
